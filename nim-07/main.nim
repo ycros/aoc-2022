@@ -11,6 +11,8 @@ type
     EntryObj = object # Could remove this, and zoop it into the above?
         name: string
         parent: Entry
+        # this is nim's solution to sum types/ADTs, without going full
+        # OOP with inheritance
         case kind: EntryKind
         of ekDir:
             entries: seq[Entry]
